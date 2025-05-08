@@ -1,0 +1,14 @@
+name: Show Message on Push
+
+on: [push]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Show Message
+        run: echo "✅ Code has been pushed to the repository!"
